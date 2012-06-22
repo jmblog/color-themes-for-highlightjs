@@ -48,7 +48,7 @@ module.exports = function(grunt) {
       data: 'build/data.json',
       root_uri: {
         staging: 'http://highlightjs.local:8000',
-        production: 'http://jmblog.github.com/color-themes-for-google-code-highlightjs'
+        production: 'http://jmblog.github.com/color-themes-for-highlightjs'
       }
     },
     
