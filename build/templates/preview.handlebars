@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{uri_root}}/css/themes/{{snake_case}}.css">
+  <style type="text/css">
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  pre,
+  pre code {
+    margin: 0;
+    border: none;
+  }
+  </style>
+</head>
+<body>
+<pre>
+<code class="ruby">class Person
+  include ActiveModel::Conversion
+  include ActiveMode::Validations
+  
+  validates_presence_of :name
+  
+  attr_accessor :name
+  
+  def initialize(attributes = {})
+    @name = attributes[:name]
+  end
+  
+  def persist
+    @persisted = true
+  end
+  
+  def persisted?
+    @persisted
+  end
+  
+  person1 = Person.new(:name => "mats")
+  p person1.valid?
+</code></pre>
+<script src="{{root_uri}}/js/highlight.pack.js"></script>
+<script>
+(function() {
+  if (window.hljs) {
+    hljs.initHighlightingOnLoad();
+  }
+})();
+</script>
+</body>
+</html>

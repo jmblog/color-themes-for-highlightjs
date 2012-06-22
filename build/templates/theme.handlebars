@@ -1,0 +1,221 @@
+  <div class="container main">
+    <h2><i class="icon icon-camera-retro icon-large"></i> Preview</h2>
+    <div class="row">
+      <div class="span8">
+<section>
+<h3>HTML</h3>
+<pre>
+<code class="html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;/header&gt;
+  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;
+  &lt;footer&gt;&lt;/footer&gt;
+  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</section>
+
+<section>
+<h3>CSS</h3>
+<pre>
+<code class="css">@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body:first-of-type pre::after {
+    content: 'highlight: ' attr(class);
+  }
+}
+
+@import url('print.css');
+@page:right {
+ margin: 1cm 2cm 1.3cm 4cm;
+}
+
+@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+
+div.text,
+#content,
+li[lang=ru] {
+  font: Tahoma, Chunkfive, sans-serif;
+  background: url('hatch.png') /* wtf? */;  color: #F0F0F0 !important;
+  width: 100%;
+}
+</code></pre>
+</section>
+
+<section>
+<h3>JavaScript</h3>
+<pre>
+<code class="javascript">function $initHighlight(block, flags) {
+  try {
+    if (block.className.search(/\bno\-highlight\b/) != -1)
+      return processBlock(block, true, 0x0F) + ' class=""';
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) { // "0 / 2" should not be parsed as regexp
+    if (checkCondition(classes[i]) === undefined)
+      return /\d+/g;
+  }
+}
+</code></pre>
+</section>
+
+<section>
+<h3>CoffeeScript</h3>
+<pre>
+<code class="coffeescript">grade = (student) -&gt;
+  if student.excellentWork
+    "A+"
+  else if student.okayStuff
+    if student.triedHard then "B" else "B-"
+  else
+    "C"
+
+eldest = if 24 &gt; 21 then "Liz" else "Ike"
+
+square = (x) -> x * x
+
+two = -> 2
+
+math =
+  root:   Math.sqrt
+  square: square
+  cube:   (x) -> x * square x
+
+race = (winner, runners...) ->
+  print winner, runners
+
+hi = `function() {
+  return [document.title, "Hello JavaScript"].join(": ");
+}`
+
+substr = "JavaScript numbers test #{ 010 / 0xf }"
+</code></pre>
+</section>
+
+<section>
+<h3>Ruby</h3>
+<pre>
+<code class="ruby">class A &lt; B; def self.create(object = User) object end end
+class Zebra; def inspect; "X#{2 + self.object_id}" end end
+
+module ABC::DEF
+  include Comparable
+
+  # @param test
+  # @return [String] nothing
+  def foo(test)
+    Thread.new do |blockvar|
+      ABC::DEF.reverse(:a_symbol, :'a symbol' + 'test' + test)
+    end.join
+  end
+
+  def [](index) self[index] end
+  def ==(other) other == self end
+end
+
+anIdentifier = an_identifier
+Constant = 1
+</code></pre>
+</section>
+
+<section>
+<h3>Python</h3>
+<pre>
+<code class="python">@requires_authorization
+def somefunc(param1='', param2=0):
+    r'''A docstring'''
+    if param1 &gt; param2: # interesting
+        print 'Gre\'ater'
+    return (param2 - param1 + 1) or None
+
+class SomeClass:<br>    pass
+</code></pre>
+</section>
+
+<section>
+<h3>Perl</h3>
+<pre>
+<code class="perl">#!/usr/bin/perl
+
+use strict;
+use integer;
+
+# loads object
+sub load
+{
+  my $flds = $c-&gt;db_load($id,@_) || do {
+    Carp::carp "Can`t load (class: $c, id: $id): '$!'"; return undef
+  };
+  my $o = $c-&gt;_perl_new();
+  $id12 = $id / 24 / 3600;
+  $o-&gt;{'ID'} = $id12 + 123;
+  #$o-&gt;{'SHCUT'} = $flds-&gt;{'SHCUT'};
+  my $p = $o-&gt;props;
+  my $vt;
+  $string =~ m/^sought_text$/;
+  $items = split //, 'abc';
+  for my $key (keys %$p)
+  {
+    if(${$vt.'::property'}) {
+      $o-&gt;{$key . '_real'} = $flds-&gt;{$key};
+      tie $o-&gt;{$key}, 'CMSBuilder::Property', $o, $key;
+    }
+  }
+  $o-&gt;save if delete $o-&gt;{'_save_after_load'};
+  return $o;
+}
+
+=head1 NAME
+POD till the end of file
+</code></pre>
+</section>
+
+<section>
+<h3>Java</h3>
+<pre>
+<code class="java">public class Demo {
+  private static final String CONSTANT = "String";
+  private Object o;
+  /**
+   * Creates a new demo.
+   * @param o The object to demonstrate.
+   */
+  public Demo(Object o) {
+    this.o = o;
+    String s = CONSTANT;
+    int i = 1;
+  }
+  public static void main(String[] args) {
+    Demo demo = new Demo();
+  }
+}
+</code></pre>
+</section>
+      </div>
+      
+      <div class="span4">
+        <aside class="sidebar adsense">
+          <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-9899595873921003";
+          /* google_code_prettify_entry */
+          google_ad_slot = "2010222514";
+          google_ad_width = 250;
+          google_ad_height = 250;
+          //-->
+          </script>
+          <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </aside>
+      </div>
+    </div>
+  </div>
