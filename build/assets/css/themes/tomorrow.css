@@ -1,3 +1,6 @@
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 .tomorrow-comment, pre .comment, pre .title {
   color: #8e908c;
@@ -36,7 +39,6 @@ pre code {
   background: white;
   color: #4d4d4c;
   font-family: Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
   line-height: 1.5;
   border: 1px solid #ccc;
   padding: 10px;
