@@ -1,6 +1,6 @@
 color-themes-for-highlightjs
 =====================================
 
-Color themes for highlight.js.
+Color themes for highlight.js
 
-see http://jmblog.github.com/color-themes-for-highlightjs/
+https://jmblog.github.io/color-themes-for-highlightjs/
